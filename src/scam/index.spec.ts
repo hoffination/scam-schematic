@@ -149,6 +149,7 @@ describe("scam", () => {
         "/projects/demo/src/app/views/hello-world/hello-world.component.spec.ts"
       );
       expect(content).toMatch(/new HelloWorldComponent/m);
+      expect(content).not.toMatch(/TestBed/m);
     });
 
     it("should not create a test file if skipTests option is true", async () => {
